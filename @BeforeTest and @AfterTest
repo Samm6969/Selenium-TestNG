@@ -1,0 +1,20 @@
+public class Abcd2 {
+
+	@BeforeTest
+	public void Login() {
+		System.out.println("Login Successfull");
+	}
+	@AfterTest
+	public void Logout() {
+		System.out.println("Logout Successfull");
+	}
+	@Test (priority=1)
+	public void AdvancedSearch() {
+		System.out.println("AdvancedSearch Successfull");
+	}
+	@Test (priority=2)
+	public void Search() {
+		System.out.println("Search Successfull");
+	}
+
+}
