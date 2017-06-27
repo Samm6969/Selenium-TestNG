@@ -1,0 +1,29 @@
+package seleTestNg;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Example1 {
+	
+	@Test 
+	public void Login() //this is test
+	{
+		System.out.println("login successfull");
+	}
+	
+	@Test (dependsOnMethods={"Login"})
+	public void Search()
+	{
+		Assert.assertEquals("abc", "xyz");
+	}
+	
+	@Test (dependsOnMethods={"Search"}, alwaysRun=true)
+	public void Logout()
+	{
+		System.out.println("LogOut successfull");
+	}
+	
+
+
+
+}
