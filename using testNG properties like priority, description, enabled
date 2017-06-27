@@ -1,0 +1,29 @@
+package seleTestNg;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Example1 {
+	
+	@Test (priority=1, description = "verify login", enabled=false)
+	public void Login()
+	{
+		System.out.println("login successfull");
+	}
+	
+	@Test (priority = 1)
+	public void Search()
+	{
+		System.out.println("search operation successfull");
+	}
+	
+	@Test (priority=3)
+	public void Logout()
+	{
+		System.out.println("LogOut successfull");
+	}
+	
+
+
+
+}
