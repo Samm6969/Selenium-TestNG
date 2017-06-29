@@ -1,0 +1,51 @@
+<suite name="Suite" >
+  <test name="Test">
+  <groups>
+  <run>
+  <include name = "regression"/>
+  </run>
+  </groups>
+    <classes>
+      <class name="seleTestNg.NewTest3"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+==============================================
+package seleTestNg;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class NewTest3 {
+	  @Test (groups = {"sanity", "regression"}, priority=1)
+	  public void Login() {
+		  System.out.println("login successfull");
+	  }
+	  @Test (groups = {"sanity"}, priority=3)
+	  public void fundTransfer() {
+		  System.out.println("prepaid recharge successfull");
+	  }
+	  @Test(groups = {"sanity", "regression"}, priority=10)
+	  public void Logout() {
+		  System.out.println("logout successfull");
+	  }
+	  @Test (groups = {"sanity"}, priority=2)
+	  public void Search() {
+		  System.out.println("search successfull");
+	  }
+	  @Test (groups = {"regression"}, priority=2)
+	  public void advancedSearch() {
+		  System.out.println("advanced search successfull");
+	  }
+	  @Test (groups = {"regression"}, priority=3)
+	  public void preaidRecharge() {
+		  System.out.println("prepaid recharge successfull");
+	  }
+	  @Test (groups = {"regression"}, priority=3)
+	  public void billPayments() {
+		  System.out.println("Bill payments successfull");
+	  }
+	
+}
