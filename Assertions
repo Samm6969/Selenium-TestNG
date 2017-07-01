@@ -1,0 +1,10 @@
+
+public class Sample3 {
+  @Test
+  public void FundTransfer() {
+	  System.out.println("Fund Successful");
+	  //throw new SkipException("any reason");
+	  String expectedTitle = "xxx";//this value is always from excel file
+	  String actualTitle = "yyy";//this value we get if from driver.getTitle();
+	  Assert.assertEquals(actualTitle, expectedTitle);
+  }
