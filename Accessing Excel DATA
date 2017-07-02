@@ -1,0 +1,38 @@
+package ReadExcelData;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ReadExcel {
+
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		File src = new File("/home/ram/Desktop/Untitled1.xls");
+		FileInputStream fis = new FileInputStream(src);
+		//XSSF is for xlsx excell file
+		//XSSFWorkbook wb = new XSSFWorkbook(fis);
+		HSSFWorkbook wb = new HSSFWorkbook(fis); //this is for .xls file
+		
+		HSSFSheet sheet1 = wb.getSheetAt(0);
+		
+		String data0 = sheet1.getRow(0).getCell(0).getStringCellValue();
+		System.out.println("data from Excel is "+ data0);
+		
+		String data1 = sheet1.getRow(0).getCell(1).getStringCellValue();
+		System.out.println("data from Excel is "+ data1);
+		
+		wb.close();
+
+	}
+
+}
