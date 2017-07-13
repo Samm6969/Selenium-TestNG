@@ -1,0 +1,39 @@
+HTML
+<a href="/projects/" title="Selenium Projects">Projects</a>
+
+Writing xpath:
+Syntax:
+//tagName[@attributeName='attributeValue']
+//a[@href='/project/']
+//a[@title='Selenium Projects']
+anothay way:
+//a[contains(text(),'Projects')]
+====================================
+css
+syntax:
+tagName[atributeName='attributeValue']
+a[href='/project/']
+a[title='Selenium Projects']
++++++++++++++++++++++++++++++++++++++++++++++
+<a href="/download/" title="Get Selenium">Download</a>
+xpath:
+//a[@href='/download/']
+//a[@title='Get Selenium']
+another way:
+//a[contains(text(),'Download')]
+====
+css
+a[href='/download/']
+a[title='Get Selenium']
++++++++++++++++++++++++++++++++++++++++++++++++++
+html:
+<li id="menu_documentation">
+<a href="/docs/" title="Technical references and guides">Documentation</a>
+xpath:
+//li[@id='menu_documentation']/a
+//a[@href='/docs/']
+//a[@title='Technical references and guides']
+//a[contains(text(),'Documentation')]
+CSS-for css to come down we use ">"
+li[id='menu_documentation']>a
+
