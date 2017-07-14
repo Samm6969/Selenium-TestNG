@@ -1,0 +1,73 @@
+html code:
+
+<div id="mBody">
+<div id="sidebar">
+<script src="/analytics.js" type="text/javascript"/>
+<div id="mainContent">
+ <h2>What is Selenium?</h2>
+
+writing xpath:
+//h2[contains(text(),'What is Selenium?')]
+//div[@id='mainContent']/h2
+//div[@id='mBody']/div[2]/h2[1]
+
+In CSS:+++++ uses ">" and ":nth-child(1)" for level downing
+#mainContent>:nth-child(1)
+#mBody>:nth-child(3)>:nth-child(5)>:nth-child(1)>:nth-child(1)>:nth-child(2)
+
+html 
+<input id="q" name="q" accesskey="s" size="30" type="text"/>
+
+xpath:
+//input[@id='q']
+//input[@name='q']
+
+css:
+#q
+input[id='q']
+input[name='q']
+
+html:
+<input id="submit" value="Go" type="submit"/>
+xpath:
+//input[@id='submit']
+//input[@value='Go']
+
+//input[@id='submit' and @type='submit']
+CSS: ++just need to add [] brackets by removing and
+input[id='submit'][type='submit']
+++if we have @id -- replace with #
+#submit
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+html code:
+<table id="choice">
+ <tbody>
+  <tr>
+   <td style="border-right: 1px solid #CCCCCC">
+    <center>
+     <h3>Selenium WebDriver</h3>
+      <a href="/projects/webdriver/">
+      <a href="/projects/webdriver/">
+     </center>
+<br/>
+
+xpath: 
+//table[@id='choice']/tbody/tr/td/center/h3
+//table[@id='choice']/tbody/tr/td[1]/center/h3
+//h3[contains(text(),'Selenium WebDriver')]
+css
+#choice>tbody>tr>td>center>h3
+table[id='choice']>tbody>tr>td>center>h3
+
+table[id='choice']>tbody>tr>:nth-child(1)>center>h3
+
+
+
+
+
+
+
+
+
+
