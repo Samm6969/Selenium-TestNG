@@ -1,0 +1,22 @@
+facebook.com
+<input id="email" class="inputtext" name="email" 
+tabindex="1" data-testid="royal_email" type="email"/>
+
+xpath: 
+//input[@id='email']
+we can combine like this using "and" "or" 2 or 3
+//input[@class='inputtext' and @id='email' and @name='email']
+css
+input[class='inputtext'][id='email'][name='email']
+html:
+<input id="u_0_r" value="Log In" 
+tabindex="4" data-testid="royal_login_button" type="submit"/>
+Dynamic X path:
+//input[starts-with(@id,'u')]
+css
+input[id^='u']
+xpath:
+//input[starts-with(@class, 'inputtext')]
+css:
+input[class^='inputtext']
+in css for starts-with we use "^" and for end we use "$"
